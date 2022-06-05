@@ -1,0 +1,8 @@
+I did almost nothing here
+
+Basic static analysis of the code showed a weird secret string 
+```
+A:4@r%uL`M-^M0c0AbcM-MFE0d_a3hgc3N
+```
+
+throwing this at cyberchef with the rot47 decoder solved this instantly

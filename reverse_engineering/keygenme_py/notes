@@ -1,0 +1,18 @@
+Solved by performing static analysis of the code
+
+I was able to determine that the key was of the format
+```
+picoCTF{1n_7h3_|<3y_of_xxxxxxxx}
+```
+where the x values are unknown
+
+Looking at the code showed the application was checking against the 
+username_trial variable
+
+```python
+hashlib.sha256(username_trial).hexdigest()[4]
+```
+
+From here I manually completed the first stage and realised that I was 
+likely getting the correct result, so I created the python script 
+'decoder.py' in order to solve the key.

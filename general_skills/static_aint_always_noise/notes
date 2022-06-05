@@ -1,0 +1,7 @@
+This was a simple case of looking at the strings in the file
+
+``` strings static | grep pico ``` 
+
+The ctf page suggested I try a script that they gave, that 
+appears to perform a similar function to the strings command. I used this after finding the 
+solution to verify

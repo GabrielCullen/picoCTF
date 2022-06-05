@@ -1,0 +1,18 @@
+This one was really really hard. Needed more hints to be honest.
+
+I was able to work out that it was a bitmap file though hexedit/exiftool 
+and realised that something was wrong in the header
+
+After looking at this wikipedia page 
+https://en.wikipedia.org/wiki/BMP_file_format
+I was able to determine the bits that needed changing in order to get the image to appear.
+
+The first bit that needed changing was 0xA, which was changed to 36 - this is the length of the bitmap file header + bitmap info header. (14+40) in hex
+
+The second bit that needed changing was 0xE, which was changed to 28. This is the size of this section (40) in hex
+
+From here I was able to get the image to display, and recognised that I wasn't being shown the full image.
+
+I started messing with the values at 0x12 (width) and 0x16 (height) to work out if this was the case.
+
+Turns out changing the value at 0x16+0x17 to 0004 was enough to enable me to retrieve the flag from the image

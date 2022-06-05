@@ -1,0 +1,5 @@
+nc mercury.picoctf.net 7449
+
+Clearly returning ascii in the form of numbers. Modified this to have all on ascii reperesented 
+by a 3 bit number, then used an online decoder 'http://www.unit-conversion.info/texttools/ascii/' 
+to retrieve the flag

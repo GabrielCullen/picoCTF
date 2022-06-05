@@ -1,0 +1,9 @@
+This one was simpler than I initially thought. I first tried strings on the file but didn't see 
+anything interesting. I then ussed exiftool to look at the metadata which seemed to suggest there 
+was something added to the end of the file. I next attempted to use steghide which also proved 
+fruitless.
+
+Using binwalk on all the nested files and folders eventually led me to the flag.txt file
+
+Strangely using bat did not print anything and it was interpreting the file as a binary
+using \cat to print out (avoiding my aliases) seemed to fix this issue and the flag was obtained
